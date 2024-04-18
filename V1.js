@@ -16,12 +16,12 @@
     const style2 = 'text-decoration: line-through; color: grey'
 
     const click = (identifier) => {
+        console.log(`%cMA: Attempting ${identifier}`, style2);
         const element = document.querySelector(identifier);
         if (element) {
             element.click();
             console.log(`%cMA: Clicked ${identifier}`, style1);
         } else {
-            console.log(`%cMA: Attempting ${identifier}`, style2);
             setTimeout(() => click(identifier), 50);
         }
     };
@@ -29,24 +29,25 @@
     window.onhashchange = function() {
         const currentHash = window.location.hash;
 
-        if (currentHash === '#studentmyday/assignment-center') {
+        if (currentHash === '#sstudentmyday/assignment-center') {
             console.log('%cMA: Assignment Center URL', style1);
             ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]', '#btn-filter-apply'].forEach(click);
         }
 
         if (currentHash === '#login') {
             console.log('%cMA: Login URL', style1);
-            const checkInput = () => {
+            const checkInputAndLogin = () => {
+                console.log(`%cMA: Attempting #Username and #remember`, style2);
                 const input = document.querySelector('#Username');
                 const checkbox = document.querySelector('#remember');
-                if (input.value.includes('@') && checkbox.checked) {
+                if (input && input.value.includes('@') && checkbox && checkbox.checked) {
                     click('#nextBtn');
                 } else {
-                    setTimeout(() => checkInput(), 50);
+                    setTimeout(() => checkInputAndLogin(), 50);
                 }
             };
 
-            checkInput();
+            checkInputAndLogin();
         }
     };
 
