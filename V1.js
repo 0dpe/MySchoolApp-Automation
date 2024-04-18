@@ -30,12 +30,12 @@
         const currentHash = window.location.hash
 
         if (currentHash === '#studentmyday/assignment-center') {
-            console.log('%cMA: Assignment Center URL', style1)
+            console.log('%cMA: Assignment Center Hash', style1)
             ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]', '#btn-filter-apply'].forEach(click)
         }
 
         if (currentHash === '#login') {
-            console.log('%cMA: Login URL', style1)
+            console.log('%cMA: Login Hash', style1)
             const checkInputAndCheckbox = () => {
                 console.log(`%cMA: Checking input & checkbox`, style2)
                 const input = document.querySelector('#Username')
@@ -44,7 +44,7 @@
                     console.log(`%cMA: Input & checkbox conditions met`, style1)
                     click('#nextBtn')
                 } else {
-                    setTimeout(() => checkInputAndCheckbox(), 50)
+                    setTimeout(checkInputAndCheckbox, 50)
                 }
             }
             checkInputAndCheckbox()
