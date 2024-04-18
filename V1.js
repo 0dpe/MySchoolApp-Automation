@@ -36,16 +36,17 @@
 
         if (currentHash === '#login') {
             console.log('%cMA: Login URL', style1);
-            const checkInput = (inputId, nextBtnId) => {
-                const input = document.querySelector(inputId);
-                if (input && inputchecked) {
-                    click(nextBtnId);
+            const checkInput = () => {
+                const input = document.querySelector('#Username');
+                const checkbox = document.querySelector('#remember');
+                if (input.value.includes('@') && checkbox.checked) {
+                    click('#nextBtn');
                 } else {
-                    setTimeout(() => checkInput(inputId, nextBtnId), 50);
+                    setTimeout(() => checkInput(), 50);
                 }
             };
 
-            checkInput('#Username', '#nextBtn');
+            checkInput();
         }
     };
 
