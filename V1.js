@@ -38,7 +38,7 @@
             console.log('%cMA: Login URL', style1);
             const checkInput = (inputId, nextBtnId) => {
                 const input = document.querySelector(inputId);
-                if (input && input.value.trim() !== '') {
+                if (input && inputchecked) {
                     click(nextBtnId);
                 } else {
                     setTimeout(() => checkInput(inputId, nextBtnId), 50);
