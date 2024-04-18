@@ -4,7 +4,7 @@
 // @version      1.0
 // @description  Automatically clicks buttons in the Blackbaud portal.
 // @author       Odpe
-// @match        https://*.myschoolapp.com/app/*
+// @match        https://*.myschoolapp.com/app*
 // @grant        none
 // ==/UserScript==
 
