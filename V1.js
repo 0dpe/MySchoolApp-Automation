@@ -10,46 +10,46 @@
 
 
 (function () {
-    'use strict';
+    'use strict'
 
     const style1 = 'font-weight: bold'
-    const style2 = 'text-decoration: line-through; color: grey'
+    const style2 = 'text-decoration: line-through color: grey'
 
     const click = (identifier) => {
-        console.log(`%cMA: Attempting ${identifier}`, style2);
-        const element = document.querySelector(identifier);
+        console.log(`%cMA: Attempting ${identifier}`, style2)
+        const element = document.querySelector(identifier)
         if (element) {
-            element.click();
-            console.log(`%cMA: Clicked ${identifier}`, style1);
+            element.click()
+            console.log(`%cMA: Clicked ${identifier}`, style1)
         } else {
-            setTimeout(() => click(identifier), 50);
+            setTimeout(() => click(identifier), 50)
         }
-    };
+    }
 
-    window.onhashchange = function() {
-        const currentHash = window.location.hash;
+    window.onhashchange = function () {
+        const currentHash = window.location.hash
 
-        if (currentHash === '#sstudentmyday/assignment-center') {
-            console.log('%cMA: Assignment Center URL', style1);
-            ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]', '#btn-filter-apply'].forEach(click);
+        if (currentHash === '#studentmyday/assignment-center') {
+            console.log('%cMA: Assignment Center URL', style1)
+            ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]', '#btn-filter-apply'].forEach(click)
         }
 
         if (currentHash === '#login') {
-            console.log('%cMA: Login URL', style1);
-            const checkInputAndLogin = () => {
-                console.log(`%cMA: Attempting #Username and #remember`, style2);
-                const input = document.querySelector('#Username');
-                const checkbox = document.querySelector('#remember');
+            console.log('%cMA: Login URL', style1)
+            const checkInputAndCheckbox = () => {
+                console.log(`%cMA: Checking input & checkbox`, style2)
+                const input = document.querySelector('#Username')
+                const checkbox = document.querySelector('#remember')
                 if (input && input.value.includes('@') && checkbox && checkbox.checked) {
-                    click('#nextBtn');
+                    console.log(`%cMA: Input & checkbox conditions met`, style1)
+                    click('#nextBtn')
                 } else {
-                    setTimeout(() => checkInputAndLogin(), 50);
+                    setTimeout(() => checkInputAndCheckbox(), 50)
                 }
-            };
-
-            checkInputAndLogin();
+            }
+            checkInputAndCheckbox()
         }
-    };
+    }
 
-    window.dispatchEvent(new Event('hashchange'));
-})();
+    window.dispatchEvent(new Event('hashchange'))
+})()
