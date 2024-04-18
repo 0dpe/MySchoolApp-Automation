@@ -37,11 +37,11 @@
         if (currentHash === '#login') {
             console.log('%cMA: Login Hash', style1)
             const checkInputAndCheckbox = () => {
-                console.log(`%cMA: Checking input & checkbox`, style2)
+                console.log('%cMA: Checking input & checkbox', style2)
                 const input = document.querySelector('#Username')
                 const checkbox = document.querySelector('#remember')
                 if (input && input.value.includes('@') && checkbox && checkbox.checked) {
-                    console.log(`%cMA: Input & checkbox conditions met`, style1)
+                    console.log('%cMA: Input & checkbox conditions met', style1)
                     click('#nextBtn')
                 } else {
                     setTimeout(checkInputAndCheckbox, 50)
