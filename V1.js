@@ -14,7 +14,7 @@
 (function () {
     'use strict'
 
-    const style1 = 'font-weight: bold'
+    const style1 = 'font-weight: bold';
     const style2 = 'text-decoration: line-through color: grey'
 
     const findAndClick = (identifier) => {
@@ -32,7 +32,7 @@
         const currentHash = window.location.hash
 
         if (currentHash === '#studentmyday/assignment-center') {
-            console.log('%cMA: Assignment Center Hash', style1)
+            console.log('%cMA: Assignment Center Hash', style1);
             ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]', '#btn-filter-apply'].forEach(findAndClick)
         }
 
