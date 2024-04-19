@@ -44,7 +44,7 @@
                 const checkbox = document.querySelector('#remember')
                 if (input && input.value.includes('@') && checkbox && checkbox.checked) {
                     console.log('%cMA: Input & checkbox conditions met', style1)
-                    click('#nextBtn')
+                    findAndClick('#nextBtn')
                 } else {
                     setTimeout(checkInputAndCheckbox, 50)
                 }
