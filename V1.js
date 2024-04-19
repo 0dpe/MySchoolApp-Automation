@@ -6,6 +6,8 @@
 // @author       Odpe
 // @match        https://*.myschoolapp.com/app*
 // @grant        none
+// @downloadURL  https://raw.githubusercontent.com/0dpe/MySchoolApp-UserScript/main/V1.js
+// @updateURL    https://raw.githubusercontent.com/0dpe/MySchoolApp-UserScript/main/V1.js
 // ==/UserScript==
 
 
