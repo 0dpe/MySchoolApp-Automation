@@ -17,14 +17,14 @@
     const style1 = 'font-weight: bold'
     const style2 = 'text-decoration: line-through color: grey'
 
-    const click = (identifier) => {
+    const findAndClick = (identifier) => {
         console.log(`%cMA: Attempting ${identifier}`, style2)
         const element = document.querySelector(identifier)
         if (element) {
             element.click()
             console.log(`%cMA: Clicked ${identifier}`, style1)
         } else {
-            setTimeout(() => click(identifier), 50)
+            setTimeout(() => findAndClick(identifier), 50)
         }
     }
 
@@ -33,7 +33,7 @@
 
         if (currentHash === '#studentmyday/assignment-center') {
             console.log('%cMA: Assignment Center Hash', style1)
-            ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]', '#btn-filter-apply'].forEach(click)
+            ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]', '#btn-filter-apply'].forEach(findAndClick)
         }
 
         if (currentHash === '#login') {
