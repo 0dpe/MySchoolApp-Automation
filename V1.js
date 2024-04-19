@@ -32,7 +32,7 @@
         const currentHash = window.location.hash
 
         if (currentHash === '#studentmyday/assignment-center') {
-            console.log('%cMA: Assignment Center Hash', style1); // This semicolon is REQUIRED, no idea why ¯\_(ツ)_/¯
+            console.log('%cMA: Assignment Center Hash', style1); // This semicolon is REQUIRED
             ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]', '#btn-filter-apply'].forEach(findAndClick)
         }
 
