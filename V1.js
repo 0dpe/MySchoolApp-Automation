@@ -33,7 +33,7 @@
 
         if (currentHash === '#studentmyday/assignment-center') {
             console.log('%cMA: Assignment Center Hash', style1)
-            ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]'].forEach(findAndClick)
+            ['[data-sort="date_due"]', '[data-sort="date_due"]', '#month-view', '#filter-status', '.status-button.active[data-id="1"]', '#btn-filter-apply'].forEach(findAndClick)
         }
 
         if (currentHash === '#login') {
