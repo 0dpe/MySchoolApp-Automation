@@ -14,6 +14,7 @@
 (function () {
     'use strict'
 
+    // Timeout (milliseconds) in polling/clicking loops 
     const pollingSpeed = 50
 
     const style1 = 'font-weight: bold'
