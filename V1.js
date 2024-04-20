@@ -2,7 +2,7 @@
 // @name         MySchoolApp Automation (MA)
 // @namespace    https://github.com/0dpe/MySchoolApp-UserScript
 // @version      1.0
-// @description  Automatically clicks buttons in the Blackbaud portal.
+// @description  Automatically clicks buttons in the Blackbaud MySchoolApp portal.
 // @author       Odpe
 // @match        https://*.myschoolapp.com/app*
 // @grant        none
