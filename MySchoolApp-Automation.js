@@ -14,6 +14,8 @@
 (function () {
     'use strict'
 
+    const pollingSpeed = 50
+
     const style1 = 'font-weight: bold'
     const style2 = 'text-decoration: line-through; color: grey'
 
@@ -24,7 +26,7 @@
             element.click()
             console.log(`%cMA: Clicked ${identifier}`, style1)
         } else {
-            setTimeout(() => findAndClick(identifier), 50)
+            setTimeout(() => findAndClick(identifier), pollingSpeed)
         }
     }
 
@@ -46,7 +48,7 @@
                     console.log('%cMA: Input & checkbox conditions met', style1)
                     findAndClick('#nextBtn')
                 } else {
-                    setTimeout(checkInputAndCheckbox, 50)
+                    setTimeout(checkInputAndCheckbox, pollingSpeed)
                 }
             }
             checkInputAndCheckbox()
