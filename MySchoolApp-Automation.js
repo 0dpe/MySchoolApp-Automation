@@ -1,5 +1,5 @@
 // ==UserScript==
-// @name         MySchoolApp Automation (MA)
+// @name         MySchoolApp Automation
 // @namespace    https://github.com/0dpe/MySchoolApp-UserScript
 // @version      1.0
 // @description  Automatically clicks buttons in the Blackbaud MySchoolApp portal.
