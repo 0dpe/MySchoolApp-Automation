@@ -1,13 +1,14 @@
-Version 1.0 uses a polling loop (`setTimeout`) with `querySelector` to check for the existence of elements to click them, which sometimes causes **performance issues** and **infinite loops**. 
+**Version 1.0** uses a polling loop (`setTimeout`) with `querySelector` to check for the existence of elements to click them. Although this approach likely works on all types of websites, it sometimes causes **performance issues** and **infinite loops**. 
 
-To fix this, I've tried **event listeners**. These all fail because 
+To fix this, I've tried **event listeners**, which all fail because MySchoolApp uses jQuery and **dynamically** modifies elements.
 - [`addEventListener("DOMContentLoaded", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) fires way too early, likely even before the UserScript runs.
 - [`addEventListener("load", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) also fires too early, before the buttons are loaded.
 - [`addEventListener("readystatechange", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readystatechange_event) with [`document.readyState === "interactive"`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState#readystatechange_as_an_alternative_to_domcontentloaded_event) yields similar results as [`addEventListener("DOMContentLoaded", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event); [`document.readyState === "complete"`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState#readystatechange_as_an_alternative_to_load_event) yields similar results as [`addEventListener("load", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event).
 - jQuery's [`$( document ).ready()`](https://learn.jquery.com/using-jquery-core/document-ready/) and [`$( window ).on( "load", function() {})`](https://learn.jquery.com/using-jquery-core/document-ready/) yield similar results as [`addEventListener("load", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event).
 
-In the future, investigate into **mutation** or **intersection** observers. Also investigate into:
-Event Delegation: Instead of trying to get the button element directly, you can use event delegation to listen for events on a parent element that exists from the beginning. When the button is added to the DOM, the event will bubble up to the parent element, and you can handle it there.
-Using the Web Components Lifecycle: If the button is part of a web component, you can utilize lifecycle methods like connectedCallback to execute code when the component is inserted into the DOM.
-Promises with element selectors:  If you're using a library like jQuery, you can use a promise-based approach with element selectors. The promise resolves when the element is found in the DOM.
-jQuery Event Handlers: If the website is using jQuery, you can take advantage of its event handlers like ajaxComplete or ajaxStop to know when the AJAX requests for loading the content have finished. 
+***
+
+Some other methods that might give even better performance: 
+- Intersection observers
+- Event delegation
+- Promises, ajaxComplete, or other featuers of jQuery
