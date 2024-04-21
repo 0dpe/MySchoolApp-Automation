@@ -31,7 +31,7 @@
         }
     }
 
-    window.onhashchange = function () {
+    addEventListener("hashchange", () => {
         const currentHash = window.location.hash
 
         if (currentHash === '#studentmyday/assignment-center') {
@@ -54,7 +54,7 @@
             }
             checkInputAndCheckbox()
         }
-    }
+    })
 
     window.dispatchEvent(new Event('hashchange'))
 })()
