@@ -5,6 +5,9 @@ In [Violentmonkey](https://violentmonkey.github.io/get-it/), install the newest 
 - In Assignment Center, rearranges by **Due** date, switches to **Month** view, and filters out **Completed** assignments. 
 - Works on any Blackbaud MySchoolApp student portal[^1].
 ## Dev Notes 🤡
-Version 1.0 uses a polling loop to check for the existance of elements to click them, which can sometimes cause infinite loops.
+Version 1.0 uses a polling loop (`setTimeout`) to check for the existence of elements to click them, which can sometimes cause performance issues and infinite loops. Workarounds I've tried that don't work: 
+- [`addEventListener("DOMContentLoaded", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event) fires way too early, likely even before the UserScript runs.
+- [`addEventListener("load", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) also fires too early, before buttons can be clicked.
+- [`addEventListener("readystatechange", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readystatechange_event) with [`document.readyState === "interactive"`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState#readystatechange_as_an_alternative_to_domcontentloaded_event) yields similar results as [`addEventListener("DOMContentLoaded", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Document/DOMContentLoaded_event); with [`document.readyState === "complete"`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState#readystatechange_as_an_alternative_to_load_event) yields similar results as [`addEventListener("load", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event)
 
 [^1]: Matches for `https://*.myschoolapp.com/app*`
