@@ -4,12 +4,8 @@
   * jQuery's [`$(document).ready(function() {})`](https://api.jquery.com/ready/) yields similar results. 
 * [`addEventListener("load", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event) also fires too early, before the buttons are loaded.
   * [`addEventListener("readystatechange", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readystatechange_event) with [`document.readyState === "complete"`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState#readystatechange_as_an_alternative_to_load_event) yields similar results.
-* jQuery's [`$(document).on("ajaxStop", function() {})`](https://api.jquery.com/ajaxStop/) seems to never fire.
+* jQuery's [`$(document).on("ajaxStop", function() {})`](https://api.jquery.com/ajaxStop/), [`$(document).on("ajaxComplete", function() {})`](https://api.jquery.com/ajaxComplete/), and [`$(document).on("ajaxSuccess", function() {})`](https://api.jquery.com/ajaxSuccess/) seem to never fire.
 
-So, **mutation observers**
+So, **intersection** or **mutation observers**
 
 ***
-
-Some other methods that might give even better performance: 
-* Intersection observers
-* ajaxComplete/ajaxSuccess or .on() in jQuery
