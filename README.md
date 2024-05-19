@@ -1,5 +1,5 @@
 # MySchoolApp-Automation 🤖
-In [Violentmonkey](https://violentmonkey.github.io/get-it/), install the newest version with this link:
+In [Violentmonkey](https://violentmonkey.github.io/get-it/), install the latest version with this link:
 ```
 https://raw.githubusercontent.com/0dpe/MySchoolApp-Automation/main/MySchoolApp-Automation.js
 ```
