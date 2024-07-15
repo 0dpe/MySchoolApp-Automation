@@ -1,0 +1,147 @@
+[    0.163287] CPU0: Thermal monitoring enabled (TM1)
+[    0.177812] thermal_sys: Registered thermal governor 'bang_bang'
+[    0.177812] thermal_sys: Registered thermal governor 'step_wise'
+[    0.177812] thermal_sys: Registered thermal governor 'user_space'
+[    4.959997] Consider using thermal netlink events interface
+[    5.246335] thermal LNXTHERM:00: registered as thermal_zone3
+[    5.246366] ACPI: thermal: Thermal Zone [CPUZ] (0 C)
+[    5.295526] thermal LNXTHERM:01: registered as thermal_zone4
+[    5.295540] ACPI: thermal: Thermal Zone [GFXZ] (0 C)
+[    5.316241] thermal LNXTHERM:02: registered as thermal_zone7
+[    5.316263] ACPI: thermal: Thermal Zone [EXTZ] (32 C)
+[    5.377699] thermal LNXTHERM:03: registered as thermal_zone8
+[    5.377705] ACPI: thermal: Thermal Zone [LOCZ] (31 C)
+[    5.389046] thermal LNXTHERM:04: registered as thermal_zone9
+[    5.389049] ACPI: thermal: Thermal Zone [BATZ] (27 C)
+[    5.399917] thermal LNXTHERM:05: registered as thermal_zone10
+[    5.399934] ACPI: thermal: Thermal Zone [CHGZ] (33 C)
+[    5.431933] proc_thermal 0000:00:04.0: enabling device (0000 -> 0002)
+[    5.443907] thermal LNXTHERM:06: registered as thermal_zone11
+[    5.443913] ACPI: thermal: Thermal Zone [PCHZ] (0 C)
+[    5.962536] iwlwifi 0000:00:14.3: enabling device (0000 -> 0002)
+[    5.963629] iwlwifi 0000:00:14.3: Detected crf-id 0x2816, cnv-id 0x1000100 wfpm id 0x80000000
+[    5.963635] iwlwifi 0000:00:14.3: PCI dev 9df0/0034, rev=0x312, rfid=0x105110
+[    5.980414] iwlwifi 0000:00:14.3: WRT: Overriding region id 0
+[    5.980417] iwlwifi 0000:00:14.3: WRT: Overriding region id 1
+[    5.980419] iwlwifi 0000:00:14.3: WRT: Overriding region id 2
+[    5.980420] iwlwifi 0000:00:14.3: WRT: Overriding region id 3
+[    5.980421] iwlwifi 0000:00:14.3: WRT: Overriding region id 4
+[    5.980422] iwlwifi 0000:00:14.3: WRT: Overriding region id 6
+[    5.980423] iwlwifi 0000:00:14.3: WRT: Overriding region id 8
+[    5.980424] iwlwifi 0000:00:14.3: WRT: Overriding region id 9
+[    5.980425] iwlwifi 0000:00:14.3: WRT: Overriding region id 10
+[    5.980426] iwlwifi 0000:00:14.3: WRT: Overriding region id 11
+[    5.980427] iwlwifi 0000:00:14.3: WRT: Overriding region id 15
+[    5.980428] iwlwifi 0000:00:14.3: WRT: Overriding region id 16
+[    5.980429] iwlwifi 0000:00:14.3: WRT: Overriding region id 18
+[    5.980430] iwlwifi 0000:00:14.3: WRT: Overriding region id 19
+[    5.980431] iwlwifi 0000:00:14.3: WRT: Overriding region id 20
+[    5.980432] iwlwifi 0000:00:14.3: WRT: Overriding region id 21
+[    5.980433] iwlwifi 0000:00:14.3: WRT: Overriding region id 28
+[    5.980875] iwlwifi 0000:00:14.3: loaded firmware version 46.7e3e4b69.0 9000-pu-b0-jf-b0-46.ucode op_mode iwlmvm
+[    6.495945] iwlwifi 0000:00:14.3: Detected Intel(R) Wireless-AC 9560 160MHz, REV=0x312
+[    6.496032] thermal thermal_zone14: failed to read out thermal zone (-61)
+[   11.906805] iwlwifi 0000:00:14.3: Failed to load firmware chunk!
+[   11.906930] iwlwifi 0000:00:14.3: iwlwifi transaction failed, dumping registers
+[   11.906975] iwlwifi 0000:00:14.3: iwlwifi device config registers:
+[   11.907150] iwlwifi 0000:00:14.3: 00000000: 9df08086 00100406 02800011 00800000 f4210004 00000000 00000000 00000000
+[   11.907205] iwlwifi 0000:00:14.3: 00000020: 00000000 00000000 00000000 00348086 00000000 000000c8 00000000 000001ff
+[   11.907259] iwlwifi 0000:00:14.3: 00000040: 00928010 10000ec0 00100c10 00000000 00000000 00000000 00000000 00000000
+[   11.907336] iwlwifi 0000:00:14.3: 00000060: 00000000 00080812 00000405 00000000 00000000 00000000 00000000 00000000
+[   11.907389] iwlwifi 0000:00:14.3: 00000080: 000f0011 00002000 00003000 00000000 00000000 00000000 00000000 00000000
+[   11.907441] iwlwifi 0000:00:14.3: 000000a0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   11.907494] iwlwifi 0000:00:14.3: 000000c0: 00000000 00000000 c823d001 0d000008 00814005 fee00478 00000000 00000000
+[   11.907546] iwlwifi 0000:00:14.3: 000000e0: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   11.907599] iwlwifi 0000:00:14.3: 00000100: 14c00000 ff000000 000000ff 00462031 00000000 00002000 00000000 00000000
+[   11.907652] iwlwifi 0000:00:14.3: 00000120: 00000000 00000000 00000000 00000000 00000000 00000000 00000000 00000000
+[   11.907704] iwlwifi 0000:00:14.3: 00000140: 00000000 00000000 00000000 16410018 00000000 0001001e 00481e1f 00000000
+[   11.907755] iwlwifi 0000:00:14.3: iwlwifi device memory mapped registers:
+[   11.907814] iwlwifi 0000:00:14.3: 00000000: 18c89002 00000040 00000000 08000000 00000000 00000000 00000000 00000000
+[   11.907868] iwlwifi 0000:00:14.3: 00000020: 00000010 0c000005 00000312 d55555d5 d55555d5 d55555d5 80008040 001f0042
+[   11.907946] iwlwifi 0000:00:14.3: Could not load the [0] uCode section
+[   11.907991] iwlwifi 0000:00:14.3: Failed to start INIT ucode: -110
+[   11.908029] iwlwifi 0000:00:14.3: WRT: Collecting data: ini trigger 13 fired (delay=0ms).
+[   12.158282] iwlwifi 0000:00:14.3: Not valid error log pointer 0x00000000 for Init uCode
+[   12.158301] iwlwifi 0000:00:14.3: IML/ROM dump:
+[   12.158308] iwlwifi 0000:00:14.3: 0x00000003 | IML/ROM error/state
+[   12.158339] iwlwifi 0000:00:14.3: 0x00000001 | IML/ROM data1
+[   12.158350] iwlwifi 0000:00:14.3: Fseq Registers:
+[   12.158374] iwlwifi 0000:00:14.3: 0x14163D33 | FSEQ_ERROR_CODE
+[   12.158383] iwlwifi 0000:00:14.3: 0x00000000 | FSEQ_TOP_INIT_VERSION
+[   12.158393] iwlwifi 0000:00:14.3: 0xA538284A | FSEQ_CNVIO_INIT_VERSION
+[   12.158402] iwlwifi 0000:00:14.3: 0x0000A384 | FSEQ_OTP_VERSION
+[   12.158412] iwlwifi 0000:00:14.3: 0x371909C7 | FSEQ_TOP_CONTENT_VERSION
+[   12.158421] iwlwifi 0000:00:14.3: 0xB6FEED1F | FSEQ_ALIVE_TOKEN
+[   12.158430] iwlwifi 0000:00:14.3: 0x6565DF70 | FSEQ_CNVI_ID
+[   12.158439] iwlwifi 0000:00:14.3: 0xA4EAB9C6 | FSEQ_CNVR_ID
+[   12.158448] iwlwifi 0000:00:14.3: 0x01000100 | CNVI_AUX_MISC_CHIP
+[   12.158460] iwlwifi 0000:00:14.3: 0x01300202 | CNVR_AUX_MISC_CHIP
+[   12.158838] iwlwifi 0000:00:14.3: 0x0000485B | CNVR_SCU_SD_REGS_SD_REG_DIG_DCDC_VTRIM
+[   12.159245] iwlwifi 0000:00:14.3: 0xA5A5A5A2 | CNVR_SCU_SD_REGS_SD_REG_ACTIVE_VDIG_MIRROR
+[   12.159658] iwlwifi 0000:00:14.3: 0x3BF53F5D | FSEQ_PREV_CNVIO_INIT_VERSION
+[   12.160056] iwlwifi 0000:00:14.3: 0xE6DA90F4 | FSEQ_WIFI_FSEQ_VERSION
+[   12.160471] iwlwifi 0000:00:14.3: 0x50154F5B | FSEQ_BT_FSEQ_VERSION
+[   12.160847] iwlwifi 0000:00:14.3: 0x6543892F | FSEQ_CLASS_TP_VERSION
+[   12.653870] iwlwifi 0000:00:14.3: Master Disable Timed Out, 100 usec
+[   12.665455] iwlwifi 0000:00:14.3: Failed to run INIT ucode: -110
+[   12.678376] iwlwifi 0000:00:14.3: retry init count 0
+[   12.679991] iwlwifi 0000:00:14.3: Detected Intel(R) Wireless-AC 9560 160MHz, REV=0x312
+[   12.680052] thermal thermal_zone14: failed to read out thermal zone (-61)
+[   18.050795] iwlwifi 0000:00:14.3: Failed to load firmware chunk!
+[   18.052671] iwlwifi 0000:00:14.3: Could not load the [0] uCode section
+[   18.054516] iwlwifi 0000:00:14.3: Failed to start INIT ucode: -110
+[   18.056094] iwlwifi 0000:00:14.3: WRT: Collecting data: ini trigger 13 fired (delay=0ms).
+[   18.305373] iwlwifi 0000:00:14.3: Not valid error log pointer 0x00000000 for Init uCode
+[   18.305769] iwlwifi 0000:00:14.3: IML/ROM dump:
+[   18.306161] iwlwifi 0000:00:14.3: 0x00000003 | IML/ROM error/state
+[   18.306594] iwlwifi 0000:00:14.3: 0x00000001 | IML/ROM data1
+[   18.307015] iwlwifi 0000:00:14.3: Fseq Registers:
+[   18.307461] iwlwifi 0000:00:14.3: 0x14163D33 | FSEQ_ERROR_CODE
+[   18.307884] iwlwifi 0000:00:14.3: 0x00000000 | FSEQ_TOP_INIT_VERSION
+[   18.308271] iwlwifi 0000:00:14.3: 0xA538284A | FSEQ_CNVIO_INIT_VERSION
+[   18.308696] iwlwifi 0000:00:14.3: 0x0000A384 | FSEQ_OTP_VERSION
+[   18.309121] iwlwifi 0000:00:14.3: 0x371909C7 | FSEQ_TOP_CONTENT_VERSION
+[   18.309558] iwlwifi 0000:00:14.3: 0xB6FEED1F | FSEQ_ALIVE_TOKEN
+[   18.309980] iwlwifi 0000:00:14.3: 0x6565DF70 | FSEQ_CNVI_ID
+[   18.310400] iwlwifi 0000:00:14.3: 0xA4EAB9C6 | FSEQ_CNVR_ID
+[   18.310821] iwlwifi 0000:00:14.3: 0x01000100 | CNVI_AUX_MISC_CHIP
+[   18.311207] iwlwifi 0000:00:14.3: 0x01300202 | CNVR_AUX_MISC_CHIP
+[   18.311646] iwlwifi 0000:00:14.3: 0x0000485B | CNVR_SCU_SD_REGS_SD_REG_DIG_DCDC_VTRIM
+[   18.312098] iwlwifi 0000:00:14.3: 0xA5A5A5A2 | CNVR_SCU_SD_REGS_SD_REG_ACTIVE_VDIG_MIRROR
+[   18.312526] iwlwifi 0000:00:14.3: 0x3BF53F5D | FSEQ_PREV_CNVIO_INIT_VERSION
+[   18.312939] iwlwifi 0000:00:14.3: 0xE6DA90F4 | FSEQ_WIFI_FSEQ_VERSION
+[   18.313313] iwlwifi 0000:00:14.3: 0x50154F5B | FSEQ_BT_FSEQ_VERSION
+[   18.313741] iwlwifi 0000:00:14.3: 0x6543892F | FSEQ_CLASS_TP_VERSION
+[   18.510910] iwlwifi 0000:00:14.3: Master Disable Timed Out, 100 usec
+[   18.522493] iwlwifi 0000:00:14.3: Failed to run INIT ucode: -110
+[   18.535348] iwlwifi 0000:00:14.3: retry init count 1
+[   18.537039] iwlwifi 0000:00:14.3: Detected Intel(R) Wireless-AC 9560 160MHz, REV=0x312
+[   18.537117] thermal thermal_zone14: failed to read out thermal zone (-61)
+[   23.682797] iwlwifi 0000:00:14.3: Failed to load firmware chunk!
+[   23.684352] iwlwifi 0000:00:14.3: Could not load the [0] uCode section
+[   23.685890] iwlwifi 0000:00:14.3: Failed to start INIT ucode: -110
+[   23.688076] iwlwifi 0000:00:14.3: WRT: Collecting data: ini trigger 13 fired (delay=0ms).
+[   23.937339] iwlwifi 0000:00:14.3: Not valid error log pointer 0x00000000 for Init uCode
+[   23.937743] iwlwifi 0000:00:14.3: IML/ROM dump:
+[   23.938118] iwlwifi 0000:00:14.3: 0x00000003 | IML/ROM error/state
+[   23.938538] iwlwifi 0000:00:14.3: 0x00000001 | IML/ROM data1
+[   23.939130] iwlwifi 0000:00:14.3: Fseq Registers:
+[   23.939589] iwlwifi 0000:00:14.3: 0x14163D33 | FSEQ_ERROR_CODE
+[   23.939991] iwlwifi 0000:00:14.3: 0x00000000 | FSEQ_TOP_INIT_VERSION
+[   23.940395] iwlwifi 0000:00:14.3: 0xA538284A | FSEQ_CNVIO_INIT_VERSION
+[   23.940932] iwlwifi 0000:00:14.3: 0x0000A384 | FSEQ_OTP_VERSION
+[   23.941293] iwlwifi 0000:00:14.3: 0x371909C7 | FSEQ_TOP_CONTENT_VERSION
+[   23.941783] iwlwifi 0000:00:14.3: 0xB6FEED1F | FSEQ_ALIVE_TOKEN
+[   23.942136] iwlwifi 0000:00:14.3: 0x6565DF70 | FSEQ_CNVI_ID
+[   23.942526] iwlwifi 0000:00:14.3: 0xA4EAB9C6 | FSEQ_CNVR_ID
+[   23.943049] iwlwifi 0000:00:14.3: 0x01000100 | CNVI_AUX_MISC_CHIP
+[   23.943441] iwlwifi 0000:00:14.3: 0x01300202 | CNVR_AUX_MISC_CHIP
+[   23.943921] iwlwifi 0000:00:14.3: 0x0000485B | CNVR_SCU_SD_REGS_SD_REG_DIG_DCDC_VTRIM
+[   23.944328] iwlwifi 0000:00:14.3: 0xA5A5A5A2 | CNVR_SCU_SD_REGS_SD_REG_ACTIVE_VDIG_MIRROR
+[   23.944795] iwlwifi 0000:00:14.3: 0x3BF53F5D | FSEQ_PREV_CNVIO_INIT_VERSION
+[   23.945148] iwlwifi 0000:00:14.3: 0xE6DA90F4 | FSEQ_WIFI_FSEQ_VERSION
+[   23.945541] iwlwifi 0000:00:14.3: 0x50154F5B | FSEQ_BT_FSEQ_VERSION
+[   23.946069] iwlwifi 0000:00:14.3: 0x6543892F | FSEQ_CLASS_TP_VERSION
+[   24.143873] iwlwifi 0000:00:14.3: Master Disable Timed Out, 100 usec
+[   24.155544] iwlwifi 0000:00:14.3: Failed to run INIT ucode: -110
+[   24.169271] iwlwifi 0000:00:14.3: retry init count 2
