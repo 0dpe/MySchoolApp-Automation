@@ -6,6 +6,4 @@
   * [`addEventListener("readystatechange", (event) => {})`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readystatechange_event) with [`document.readyState === "complete"`](https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState#readystatechange_as_an_alternative_to_load_event) yields similar results.
 * jQuery's [`$(document).on("ajaxStop", function() {})`](https://api.jquery.com/ajaxStop/), [`$(document).on("ajaxComplete", function() {})`](https://api.jquery.com/ajaxComplete/), and [`$(document).on("ajaxSuccess", function() {})`](https://api.jquery.com/ajaxSuccess/) seem to never fire.
 
-So, **intersection** or **mutation observers**
-
-***
+So, **intersection** or **mutation observers** can be utilized. Although, since clicking an html checkbox element doesn't update the `checked="checked"` attribute, polling loops with `querySelector` and `.checked` can be used, or event listeners.
