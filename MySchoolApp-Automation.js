@@ -16,11 +16,11 @@
     const consoleStyle = 'font-weight: bold'
     const urls = {
         assignmentCenter: '.myschoolapp.com/lms-assignment/assignment-center/student',
-        login: '.myschoolapp.com/app/student#login'
+        login: '#login'
     }
 
     const observeNewElements = (callback) => {
-        new MutationObserver(callback).observe(document.body, { subtree: true, childList: true })
+        new MutationObserver(callback).observe(document.body, { subtree: true, childList: true, attributes: true })
     }
 
     if (location.href.includes(urls.assignmentCenter)) {
@@ -43,16 +43,19 @@
         })
     }
 
-    if (location.href.includes(urls.login)) {
-        console.log(`%cLogin URL`, consoleStyle)
-        observeNewElements(() => {
-            const nextButton = document.querySelector('input[value="Next"]')
-            const rememberMeCheckbox = document.querySelector('input[checked="checked"]')
-            const usernameInput = document.querySelector('#Username')
-            if (nextButton && rememberMeCheckbox && usernameInput && usernameInput.value.includes('@')) {
-                nextButton.click()
-                console.log(`%cMA Clicked Next Button:`, consoleStyle, nextButton)
-            }
-        })
-    }
+    addEventListener("hashchange", () => {
+        if (window.location.hash === urls.login) {
+            console.log(`%cLogin URL`, consoleStyle)
+            observeNewElements(() => {
+                const nextButton = document.querySelector('input[value="Next"]')
+                const rememberMeCheckbox = document.querySelector('input[checked="checked"]')
+                const usernameInput = document.querySelector('#Username')
+                if (nextButton && rememberMeCheckbox && usernameInput && usernameInput.value.includes('@')) {
+                    nextButton.click()
+                    console.log(`%cMA Clicked Next Button:`, consoleStyle, nextButton)
+                }
+            })
+        }
+    })
+    window.dispatchEvent(new Event('hashchange'))
 })()
