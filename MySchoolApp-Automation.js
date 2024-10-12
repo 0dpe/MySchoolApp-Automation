@@ -15,15 +15,15 @@
 
     const consoleStyle = 'font-weight: bold'
     const urls = {
-        assignmentCenter: 'https://worcesteracademy.myschoolapp.com/lms-assignment/assignment-center/student',
-        login: 'https://worcesteracademy.myschoolapp.com/app/student#login'
+        assignmentCenter: '.myschoolapp.com/lms-assignment/assignment-center/student',
+        login: '.myschoolapp.com/app/student#login'
     }
 
     const observeNewElements = (callback) => {
         new MutationObserver(callback).observe(document.body, { subtree: true, childList: true })
     }
 
-    if (location.href === urls.assignmentCenter) {
+    if (location.href.includes(urls.assignmentCenter)) {
         console.log(`%cMA: Assignment Center URL`, consoleStyle)
         observeNewElements(() => {
             const listView = document.querySelector('sky-radio[icon="list"]:not([MA-data-clicked]) input[type="radio"]')
@@ -43,7 +43,7 @@
         })
     }
 
-    if (location.href === urls.login) {
+    if (location.href.includes(urls.login)) {
         console.log(`%cLogin URL`, consoleStyle)
         observeNewElements(() => {
             const nextButton = document.querySelector('input[value="Next"]')
