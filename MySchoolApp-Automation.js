@@ -10,7 +10,7 @@
 // @updateURL    https://raw.githubusercontent.com/0dpe/MySchoolApp-Automation/main/MySchoolApp-Automation.js
 // ==/UserScript==
 
-(function () {
+(() => {
     'use strict'
 
     const consoleStyle = 'font-weight: bold'
