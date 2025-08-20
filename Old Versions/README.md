@@ -8,4 +8,4 @@ This version uses a polling loop (`setTimeout`) with `querySelector` to check fo
 * jQuery's [`$(document).on("ajaxStop", function() {})`](https://api.jquery.com/ajaxStop/), [`$(document).on("ajaxComplete", function() {})`](https://api.jquery.com/ajaxComplete/), and [`$(document).on("ajaxSuccess", function() {})`](https://api.jquery.com/ajaxSuccess/) seem to never fire.
 
 ## Version 2.0
-This version uses mutation observers.
+This version uses mutation observers. Outdated because of updated website at start of school year in 2025.
