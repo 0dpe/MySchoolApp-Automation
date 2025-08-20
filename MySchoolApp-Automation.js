@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         MySchoolApp Automation
 // @namespace    https://github.com/0dpe/MySchoolApp-Automation
-// @version      2.0
+// @version      2.1
 // @description  Automatically clicks buttons in the Blackbaud MySchoolApp student portal.
 // @author       Odpe
 // @match        https://*.myschoolapp.com/*
@@ -26,19 +26,29 @@
     if (location.href.includes(urls.assignmentCenter)) {
         console.log(`%cMA: Assignment Center URL`, consoleStyle)
         observeNewElements(() => {
-            const listView = document.querySelector('sky-radio[icon="list"]:not([MA-data-clicked]) input[type="radio"]')
-            if (listView) {
-                listView.click()
-                listView.closest('sky-radio').setAttribute('MA-data-clicked', 'true')
-                console.log(`%cMA Clicked List View:`, consoleStyle, listView)
-            }
-            const completedCheckbox = Array.from(document.querySelectorAll("span.ng-star-inserted:not([MA-data-clicked])"))
-                .find(el => el.textContent.includes("Completed"))
-                ?.closest("label.sky-checkbox-wrapper.sky-switch")
-            if (completedCheckbox && completedCheckbox.querySelector('sky-icon[icon="check"]')) {
-                completedCheckbox.click()
-                completedCheckbox.querySelector("span.ng-star-inserted").setAttribute('MA-data-clicked', 'true')
-                console.log(`%cMA Clicked Completed Checkbox:`, consoleStyle, completedCheckbox)
+            const listView = document.querySelector('sky-radio[iconname="text-bullet-list"]:not([MA-data-clicked]) input[name="viewMode"]')
+            if (!listView) return;
+            listView.click()
+            listView.closest('sky-radio').setAttribute('MA-data-clicked', 'true')
+            console.log(`%cMA Clicked List View:`, consoleStyle, listView)
+
+            const completedNode = document.evaluate(
+                "//*[normalize-space(text())='Completed']",
+                document,
+                null,
+                XPathResult.FIRST_ORDERED_NODE_TYPE,
+                null
+            ).singleNodeValue;
+            if (!completedNode) return;
+            const label = completedNode.closest('label');
+            if (!label) return;
+            if (label.getAttribute('MA-data-clicked') === 'true') return;
+            const checkbox = label.querySelector('input[type="checkbox"]');
+            if (!checkbox) return;
+            if (!!label.querySelector('.sky-checkbox-icon-modern-checked')) {
+                label.setAttribute('MA-data-clicked', 'true');
+                checkbox.click();
+                console.log(`%cMA Clicked Completed Checkbox:`, consoleStyle, checkbox)
             }
         })
     }
